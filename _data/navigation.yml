@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "poem"
-    url: /categories/poem/
+#  - title: "poem"
+#    url: /categories/poem/
   - title: "Categories"
     url: /categories/
   - title: "Tags"
