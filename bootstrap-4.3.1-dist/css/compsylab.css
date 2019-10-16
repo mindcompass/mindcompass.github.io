@@ -1,0 +1,63 @@
+
+/* 전체 영역을 통틀어서 스타일 정의 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+  font-family: 'nanumgothic'
+}
+a {
+  color:blue;
+  text-decoration: none;
+}
+a:hover {
+  color:green;
+  text-decoration: none;
+  cursor: pointer
+}
+/* 네비게이션 영역 */
+.navbar  { /*배경 색상*/
+  background-color: #000000;
+  border-color: #000000;
+}
+.navbar-default .navbar-brand { /*네비게이션 제목 색상*/
+  color : #ffffff;
+}
+
+.navbar-default .navbar-expand-lg .navbar-light .bg-light:hover,
+.navbar-default .navbar-expand-lg .navbar-light .bg-light:hover:focus { /* 네비게이션 제목에 마우스를 올렸을 대 */
+  background-color: transparent;
+  color : #bbbbbb;
+}
+.navbar-expand-lg .navbar-light .bg-light > .active > a,
+.navbar-expand-lg .navbar-light .bg-light > .active > a:hover,
+.navbar-expand-lg .navbar-light .bg-light > .active > a:focus { /* 현재 선택된 네비게이션 색상 이벤트 */
+  color: white;
+  background-color: #000000;
+}
+
+.navbar-expand-lg .navbar-light .bg-light > li > a:hover,
+.navbar-expand-lg .navbar-light .bg-light > li > a:focus { /* 네비게이션 글자에 마우스를 올렸을 때 */
+  color: #bbbbbb;
+}
+
+.navbar-expand-lg .navbar-light .bg-light > .open > a,
+.navbar-expand-lg .navbar-light .bg-light > .open > a:hover,
+.navbar-expand-lg .navbar-light .bg-light > .open > a:focus { /* 현재 선택된 네비게이션 색상 이벤트 */
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-expand-lg .navbar-light .bg-light > li > a { /* 네비게이션 기본 색상*/
+  color: white;
+}
+
+@media (max-width: 767px) {/* 해상도가 작을 때 드랍다운 아이템에 마우스를 올렸을 때*/
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color : #bbbbbb;
+  }
+
+}
