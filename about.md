@@ -15,7 +15,7 @@ layout: single
 
 제 관심 분야는 다음과 같습니다.
 
-<p style="font-size: 2rem; font-weight: 1000" class="notice--success">
-Natural Language Processing, Machine Learning, Psychometrics, Psychotherapy
-</p>
+
+**`Machine Learning, Natural Language Processing, Psychometrics, Psychotherapy`**
+
 궁금한 점이나 조언해주실 내용 있으시면 이메일을 통해 연락주세요.
