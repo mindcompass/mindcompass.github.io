@@ -1,24 +1,19 @@
 ---
 title:  "Java와 Python 기본 문법 비교"
-excerpt: 자주 쓰는 java와 Python 문법 확인 
+excerpt: "자주 쓰는 java와 Python 문법 확인"
 toc: true
 toc_sticky: true
 
 categories:
- -  programming
-  tags:
-
--  Java
-
--  Python
-
--  비교
-
--  문법
-
-last_modified_at: 2019-11-06
-
+  - programming
+tags:
+- Java
+- Python
+- 비교
+- 문법
+last_modified_at: 2019-12-21
 ---
+
 
 - 프로그램은 언어에 따라서 사용하는 문법이 약간 다릅니다. Java와 Python의 기본 문법의 차이를 확인해봅시다
 
