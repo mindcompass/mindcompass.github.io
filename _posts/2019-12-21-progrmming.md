@@ -64,7 +64,7 @@ else :
 	print("0입니다.")
 ```
 
-#  
+<br>    
 
 ## 2. for 반목문 (배열 혹은 리스트 활용)
 
@@ -102,7 +102,7 @@ for element in array:
     print(element)
 ```
 
-#  
+<br>  
 
 ## 3. While 반복문
 
