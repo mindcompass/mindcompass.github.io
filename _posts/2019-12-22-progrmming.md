@@ -1,6 +1,6 @@
 ---
 title:  "venv을 활용하여 Python 가상환경 사용하기"
-excerpt: "가상 환경을 사용하는 목적과 venv를 사용하는 방법 안내""
+excerpt: "가상 환경을 사용하는 목적과 venv를 사용하는 방법 안내"
 toc: true
 toc_sticky: true
 
