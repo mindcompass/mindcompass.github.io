@@ -7,8 +7,8 @@ toc_sticky: true
 categories:
   - programming
 tags:
-- Python
 - venv
+- Python
 - 가상화
 - 라이브러리
 last_modified_at: 2019-12-22
@@ -104,4 +104,4 @@ pip freeze > requirements.txt #pip freeze 수행한 결과를 requirements.txt�
 pip install -r requirements.txt #requirements.txt에 저장된 라이브러리 목록을 인스톨 한다.
 ```
 
-설치를 하면 venv 폴더 안에 Lib 폴더 안에 site-packages 폴더 안에 해당 라이브러리가 설치된 것을 확인하실 수있습니다.
+설치를 하면 venv 폴더 안에 Lib 폴더 안에 site-packages 폴더 안에 해당 라이브러리가 설치된 것을 확인하실 수있습니다..
