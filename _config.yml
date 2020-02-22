@@ -104,7 +104,12 @@ analytics:
     tracking_id          : UA-150183063-1
     anonymize_ip         : # true, false (default)
 
-
+# Math equation
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 # Site Authorgit
 author:
