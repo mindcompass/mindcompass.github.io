@@ -9,7 +9,7 @@ categories:
 tags:
 - Python
 - pandas
-- 함수
+- Series
 - numpy
 use_math: true
 last_modified_at: 2019-12-23
@@ -46,7 +46,7 @@ b.value_counts()
 1.0    1
 2.0    1
 dtype: int64
-    
+
 b[[1,3,5]] #2개 이상 전달할 때는 리스트로 전달해야 함
 1    1.0
 3    3.0
@@ -98,10 +98,9 @@ j[1:3] # 문자로된 인덱싱이라도 인데스의 순서로 인덱싱을 할
 b    400
 c    107
 dtype: int32
-    
+
 j['c':'d'] #문자 인덱싱을 slicing하면 마지막 문자 index값도 포함됨
 c    107
 d    108
 dtype: int32
 ```
-
