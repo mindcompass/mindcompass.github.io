@@ -15,7 +15,7 @@ use_math: true
 last_modified_at: 2019-12-23
 ---
 
-### 1.데이터프레임 탐색하는 함수
+## 1.데이터프레임 탐색하는 함수
 
 ```python
 train_data =pd.read_csv("./train.csv") #타이타닉 데이터 읽어오기
@@ -66,7 +66,7 @@ Index(['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp',
 
 
 
-### 2.데이터프레임 생성하기
+## 2.데이터프레임 생성하기
 
 실제 데이터분석에서 거의 사용하지 않음 
 
@@ -97,7 +97,7 @@ c=pd.Series([100,200,300],['a','b','c'])
 
 ```
 
-### 3. 데이터프레임 특정 row, column선택하기
+## 3. 데이터프레임 특정 row, column선택하기
 
 ```python
 train_data = pd.read_csv('./train.csv')
@@ -137,7 +137,7 @@ train_data[5:10] [["PassengerId","Survived","Pclass"]]
 
 
 
-### 4.행을 포함한 인덱싱을 위한 함수 loc 과 iloc
+## 4.행을 포함한 인덱싱을 위한 함수 loc 과 iloc
 
 ```python
 #loc은 데이터프레임에 존재하는 index를 활용하는 함수
@@ -163,7 +163,7 @@ train_data.loc[100:200][["Name","Pclass"]]
 train_data[100:200][["Name","Pclass"]]
 ```
 
-### 5. boolean selection으로 row선택
+## 5. boolean selection으로 row선택
 
 numpy와 동일한 방식으로 해당 조건에 맞는 row만 선택
 
@@ -178,7 +178,7 @@ train_data[age30&class1].shape
 
 ```
 
-###  6. column 추가 & 삭제하기
+##  6. column 추가 & 삭제하기
 
 ```python
 #타이타닉 데이터에서 10% 할인된 운행료 컬럼 추가
@@ -191,7 +191,7 @@ train_data.insert(10,'Saled Fare',train_data['Fare']*0.9)
 #insert함수를 통해서 원하는 위치에 특정컬럼을 넣을 수 있음
 ```
 
-### 7. 각 변수에 대한 상관관계 구하기
+## 7. 각 변수에 대한 상관관계 구하기
 
 ```python
 train_data.corr()
@@ -207,7 +207,7 @@ plt.matshow(train_data.iloc[:,[1,2,5,6]].corr()) # 상관관계에 따른 시각
 
 
 
-### 8. NaN데이터 처리하기(dropna, isna, fillna)
+## 8. NaN데이터 처리하기(dropna, isna, fillna)
 
 1. NaN데이터가 있는 row/column 삭제
 
@@ -254,7 +254,7 @@ train_data[train_data['Survived']==1]['Age']=train_data[train_data['Survived']==
 
 
 
-### 9.데이터형 변형(숫자데이터 -> 범주형 데이터)
+## 9.데이터형 변형(숫자데이터 -> 범주형 데이터)
 
 ```python
 train_data.info()
@@ -283,7 +283,7 @@ train_data['Age'].apply(age_change)
 
 
 
-### 10. 범주형 데이터 전처리(one-hot endcoding)
+## 10. 범주형 데이터 전처리(one-hot endcoding)
 
 기본적으로 범주형 데이터의 경우 연산이 불가능하기 때문에 연산이 가능하도록 숫자형으로 변경할 필요가 있음
 

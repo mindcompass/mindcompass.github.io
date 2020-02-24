@@ -15,7 +15,7 @@ use_math: true
 last_modified_at: 2019-12-23
 ---
 
-### 1.Series함수
+## 1.Series함수
 
 value_counts: NaN을 제외하고 각 값들의 빈도를 반환
 
@@ -55,7 +55,7 @@ b[[1,3,5]] #2개 이상 전달할 때는 리스트로 전달해야 함
 
 
 
-### 2.(Series).drop()
+## 2.(Series).drop()
 
 ```py
 j = pd.Series(np.arange(105, 110), ['a', 'b', 'c', 'd', 'e'])
@@ -78,7 +78,7 @@ dtype: int32
 
 ```
 
-### 3. Series indexing
+## 3. Series indexing
 
 ```python
 j = pd.Series(np.arange(105, 110), ['a', 'b', 'c', 'd', 'e'])

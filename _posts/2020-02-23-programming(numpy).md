@@ -15,7 +15,7 @@ use_math: true
 last_modified_at: 2019-12-22
 ---
 
-### 1.np.arange
+## 1.np.arange
 
 np.arange(5) => array([0, 1, 2, 3, 4])
 
@@ -25,7 +25,7 @@ np.arange(1,11,2) =>array([1, 3, 5, 7, 9])
 
 
 
-### 2.np.ones/ np.zeros
+## 2.np.ones/ np.zeros
 
 ```py
 np.ones((3,2))
@@ -41,7 +41,7 @@ array([[0., 0.],
 
 
 
-### 3. np.empty/ np.full
+## 3. np.empty/ np.full
 
 np.empty =>형태의 n차원 nd.array를 생성하는데 초기 값으로 메모리를 할당해줌(값은 의미없음)
 
@@ -54,7 +54,7 @@ array([[5, 5],
 
 
 
-### 4. np.eye
+## 4. np.eye
 
 단위행렬 생성
 
@@ -65,14 +65,14 @@ array([[1., 0., 0.],
        [0., 0., 1.]])
 ```
 
-### 5.np.linspace
+## 5.np.linspace
 
 ```
 np.linspace(1,10,5)
 array([ 1.  ,  3.25,  5.5 ,  7.75, 10.  ])
 ```
 
-### 6.reshape(객체의 메소드함수)
+## 6.reshape(객체의 메소드함수)
 
 ```py
 x=np.arange(1,16)
@@ -81,7 +81,7 @@ x.reshape(3,-1)
 # -1의 값은 어차피 5라고 유추가능함
 ```
 
-### 7.random
+## 7.random
 
 ```python
 np.random.rand(3,2)
@@ -116,7 +116,7 @@ array([[4, 3, 2, 6],
        [5, 1, 8, 9]])
 ```
 
-### 8.np.ravel
+## 8.np.ravel
 
 ndarray의 멤버함수로도 있고, numpy의 일반함수로도 존재함
 
@@ -138,7 +138,7 @@ array([ 0,  5, 10,  1,  6, 11,  2,  7, 12,  3,  8, 13,  4,  9, 14])
 #flatten과 결과값이 동일하지만, 원래 자료를 유지(view)(단 order가 c일 경우에 한함)
 ``````
 
-### 9.np.ndarray
+## 9.np.ndarray
 
 ```python
 y=np.arange(15).reshape(3,5)
@@ -146,7 +146,7 @@ y.flatten()
 #ravel 결과값이 동일하지만, 원래 자료를 복사본을 생성함
 ```
 
-### 10.(ndadrray).ndim/ (ndadrray).shape
+## 10.(ndadrray).ndim/ (ndadrray).shape
 
 ```python
 x = np.arange(15).reshape(3, 5)
@@ -156,14 +156,14 @@ x.shape
 (3, 5)
 ```
 
-### 11.add/substract/multiply/divide
+## 11. add/substract/multiply/divide
 
 ```python
 #행과 열이 같은 형식일 경우 연산가능(브로드캐스팅 제외)
 # 대부분 함수식보다 x + y 같은 수식으로 사용함
 ```
 
-### 12. mean/ max/ argmax/ var/median/std (통계관련)
+## 12. mean/ max/ argmax/ var/median/std (통계관련)
 
 ```python
 x =np.random.rand(3,5)
@@ -191,7 +191,7 @@ np.std(x)
 
 
 
-### 13. sum/ cumsum/any / all/ where 함수
+## 13. sum/ cumsum/any / all/ where 함수
 
 ```python
 x =np.random.rand(3,5)
@@ -226,7 +226,7 @@ array([[0.99027278, 0.        , 0.70196529, 0.94970636, 0.88460239],
 
 
 
-### 14. boolean index
+## 14. boolean index
 
 ```python
 x = np.random.randint(1,10,size=5)
@@ -248,7 +248,7 @@ array([6, 8])
 
 
 
-### 15.linalg 서브모듈
+## 15.linalg 서브모듈
 
 linear algebra : 선형대수
 
