@@ -1,6 +1,6 @@
 ---
 title:  "python pandas 정리4_Dataframe3"
-excerpt: "concat, merge'
+excerpt: "concat, merge을 활용한 데이터 병합"
 toc: true
 toc_sticky: true
 
@@ -37,7 +37,7 @@ pd.concat([df1,df2])
 3	3	-0.599125
 4	4	-1.368194
 
-pd.concat([df1,df2], ignore_index=True) #기존 index를 무시하고 다시 0베이스 index를 생성함 
+pd.concat([df1,df2], ignore_index=True) #기존 index를 무시하고 다시 0베이스 index를 생성함
 	key1	value1
 0	0	0.843955
 1	1	0.991502
@@ -51,7 +51,7 @@ pd.concat([df1,df2], ignore_index=True) #기존 index를 무시하고 다시 0�
 9	4	-1.368194
 
 
-#만약 행으로 concat를 수행할 때, column명이 다르면 없는 컬럼명에 NaN이 발생함 
+#만약 행으로 concat를 수행할 때, column명이 다르면 없는 컬럼명에 NaN이 발생함
 
 # 단순한 수평 결합
 pd.concat([df1,df2],  axis=1)
@@ -81,13 +81,13 @@ pd.concat([df1,df2],  axis=1)
 
 - pandas.merge 함수가 사용됨
 
-  
+
 
 ```python
 자료 출처: 온라인 패스트캠퍼스 온라인 강의자료
 
-customer = pd.DataFrame({'customer_id' : np.arange(6), 
-                    'name' : ['철수'"", '영희', '길동', '영수', '수민', '동건'], 
+customer = pd.DataFrame({'customer_id' : np.arange(6),
+                    'name' : ['철수'"", '영희', '길동', '영수', '수민', '동건'],
                     '나이' : [40, 20, 21, 30, 31, 18]})
 
 customer
@@ -98,7 +98,7 @@ customer
 3		3		영수		30
 4		4		수민		31
 5		5		동건		18    
-    
+
 orders = pd.DataFrame({'customer_id' : [1, 1, 2, 2, 2, 3, 3, 1, 4, 9], 'item' : ['치약', '칫솔', '이어폰', '헤드셋', '수건', '생수', '수건', '치약', '생수', '케이스'], 'quantity' : [1, 2, 1, 1, 3, 2, 2, 3, 2, 1]})
 orders
 	customer_id	item	quantity
@@ -170,7 +170,7 @@ item
 치약    4
 칫솔    2
 Name: quantity, dtype: int64
-        
+
 ```
 
 
@@ -180,6 +180,5 @@ Name: quantity, dtype: int64
 - 내부적으로 pandas.merge 함수 사용
 - 기본적으로 index를 사용하여 left join
 
-customer1.join(orders1,how='inner') 
-
-# 인덱스를 사용하기 때문에 인덱스를 만들고 join실시
+customer1.join(orders1,how='inner')
+인덱스를 사용하기 때문에 인덱스를 만들고 join실시

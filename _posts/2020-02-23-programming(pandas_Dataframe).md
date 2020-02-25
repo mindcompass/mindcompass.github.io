@@ -26,9 +26,9 @@ train_data.shape #데이터프레임의 형태를 보여줌 trainging데이터�
 (891, 12)
 
 train_data.describe()
-	PassengerId	Survived	Pclass	Age	SibSp	Parch	Fare
-count 891.00000	891.00000	891.00000	714.00000	891.00000	891.00000   891.00000
-mean 446.000000	0.383838	2.308642	29.699118	0.523008	0.381594	32.204208
+	PassengerId	Survived	Pclass		Age		SibSp		Parch		Fare
+count 	891.0000	891.00000	891.00000	714.00000	891.00000	891.00000	891.00000
+mean	446.0000	0.383838	2.308642	29.699118	0.523008	0.381594	32.204208
 std	257.353842	0.486592	0.836071	14.526497	1.102743	0.806057	49.693429
 min	1.000000	0.000000	1.000000	0.420000	0.000000	0.000000	0.000000
 25%	223.500000	0.000000	2.000000	20.125000	0.000000	0.000000	7.910400
@@ -62,6 +62,9 @@ train_data.columns
 Index(['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp',
        'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'],
       dtype='object')
+
+type(train_data)
+pandas.core.frame.DataFrame
 ```
 
 
@@ -155,7 +158,7 @@ train_data.iloc[[100,200,300,400],[0,1,2]] 리턴 결과는 위 loc과 동일
 #단 이런 방식으로는 슬라이싱이 통하지 않음/ slicing을 사용하기 위해서는 아래처럼 구성해야 함
 train_data.iloc[0:10,0:5]
 train_data.loc[0:10,"PassengerId":"Name"]
-
+# slicing을 하는 경우, []을 사용하지 않음
 
 #슬라이싱을 위해서는 다음처럼 구성해야 함
 train_data.loc[100:200][["Name","Pclass"]]

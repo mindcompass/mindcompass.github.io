@@ -1,6 +1,6 @@
 ---
 title:  "python pandas 정리3_Dataframe2"
-excerpt: "pandas의 Dataframe Groupby pivot,stack 등
+excerpt: "pandas의 Dataframe Groupby pivot,stack 등"
 toc: true
 toc_sticky: true
 
@@ -61,14 +61,14 @@ Pclass
 2    29.877630
 3    25.140620
 Name: Age, dtype: float64
-        
+
 class_group.mean()['Survived']
 Pclass
 1    0.629630
 2    0.472826
 3    0.242363
 Name: Survived, dtype: float64
-        
+
 class_group.min() # 각 컬럼별 최소값 출력
 class_group.max() # 각 컬럼별 최대값 출력
 
@@ -78,7 +78,7 @@ Sex
 female    0.742038
 male      0.188908
 Name: Survived, dtype: float64
- 
+
 #클래스와 성별에 다른 생존률 구해보기
 dual_class=df. groupby(['Pclass','Sex'])
 dual_class.mean().loc[:,'Survived']
@@ -180,7 +180,7 @@ df['saled_Fare']= df.groupby('Pclass').transform(saled)['Fare']
 
 #예3
 df.groupby(['Pclass','Sex']).mean()
-df['Age2'] = df.groupby(['Pclass', 'Sex']).transform(np.mean)['Age'] 
+df['Age2'] = df.groupby(['Pclass', 'Sex']).transform(np.mean)['Age']
 # 성별 x 클래스별 각각 평균(6개)에 대응하는 Age2가 생성됨
 
 ```
@@ -189,12 +189,12 @@ df['Age2'] = df.groupby(['Pclass', 'Sex']).transform(np.mean)['Age']
 
 ## 4. pivot, pd.pivot_table
 
-#### pivot
+pivot
 
 - dataframe의 형태를 변경
 - 인덱스, 컬럼, 데이터로 사용할 컬럼을 명시
 
-#### pivot_table
+ pivot_table
 
 - 기능적으로 pivot과 동일
 - pivot과의 차이점
@@ -202,7 +202,7 @@ df['Age2'] = df.groupby(['Pclass', 'Sex']).transform(np.mean)['Age']
 
 ```python
 pivot 활용
-#출처 패스트캠퍼스 강의노트 
+#출처 패스트캠퍼스 강의노트
 	지역	요일	강수량	강수확률
 0	서울	월요일	100	80
 1	서울	화요일	80	70
@@ -217,7 +217,7 @@ pivot 활용
 10	경기	목요일	50	50
 11	경기	금요일	100	10
 
-df.pivot(index='요일',columns='지역') #나머지는 values로 
+df.pivot(index='요일',columns='지역') #나머지는 values로
 		강수량					강수확률
 지역	경기		부산	   서울	 경기		부산	  서울
 요일						
@@ -253,9 +253,9 @@ male	41.281386	30.740707	26.507589	67.226127	19.741782	12.661633
 
 
 
-### 5. stack & unstack
+## 5. stack & unstack
 
-실제 데이터분석에서 거의 사용하지 않음 
+실제 데이터분석에서 거의 사용하지 않음
 
 ```python
 new_df=df.set_index(['지역','요일'])
@@ -292,4 +292,3 @@ new_df.unstack(1).stack(1) #stack은 컬럼이 있는 요인을 index로 쌓음
 ![](https://i.imgur.com/mTvc37V.png)
 
 ![](https://i.imgur.com/LLXL3Hi.png)
-
