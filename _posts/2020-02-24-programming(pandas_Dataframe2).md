@@ -253,7 +253,59 @@ male	41.281386	30.740707	26.507589	67.226127	19.741782	12.661633
 
 
 
-## 5. stack & unstack
+## 5. melt(wide데이터를 long데이터로 변경함)
+
+ melt메서드는 지정한 열의 데이터를 모두 행으로 정리해줍니다. 
+
+|인자|melt 메서드 인자 세부 설명|
+|:------:|:---:|
+|id_vars|위치를 그대로 유지할 열의 이름을 지정함|
+|values_vars|행의 위치를 변경할 열의 이름을 지정함|
+|var_name|value_vars로 위치를 변경한 열의 이름을 지정함|
+|value_name|var_name으로 위치를 변경한 열의 데이터를 저장한 열의 이름을 지정|
+
+```python
+import pandas as pd
+pew_wide = pd.read_csv("https://raw.githubusercontent.com/nickhould/tidy-data-python/master/data/pew-raw.csv")
+pew_wide
+	religion		<$10k	$10-20k	$20-30k	$30-40k	$40-50k	$50-75k
+0	Agnostic		27	34	60	81	76	137
+1	Atheist			12	27	37	52	35	70
+2	Buddhist		27	21	30	34	33	58
+3	Catholic		418	617	732	670	638	1116
+4	Dont know/refused	15	14	15	11	10	35
+#현재는 소득의 수준에 따라 여러 열로 구성된 wide data임
+
+pew_long = pd.melt(pew_wide,id_vars='religion',var_name='income',value_name='count')
+pew_long.head(15)
+
+	religion			income	count
+0	Agnostic			<$10k	27
+1	Atheist				<$10k	12
+2	Buddhist			<$10k	27
+3	Catholic			<$10k	418
+4	Dont know/refused		<$10k	15
+5	Evangelical Prot		<$10k	575
+6	Hindu				<$10k	1
+7	Historically Black Prot		<$10k	228
+8	Jehovahs Witness		<$10k	20
+9	Jewish				<$10k	19
+10	Agnostic			$10-20k	34
+11	Atheist				$10-20k	27
+12	Buddhist			$10-20k	21
+13	Catholic			$10-20k	617
+14	Dont know/refused		$10-20k	14
+
+```
+
+
+
+
+
+
+
+
+## 6. stack & unstack
 
 실제 데이터분석에서 거의 사용하지 않음
 
@@ -261,20 +313,20 @@ male	41.281386	30.740707	26.507589	67.226127	19.741782	12.661633
 new_df=df.set_index(['지역','요일'])
 # 기존 df에서 지역과 요일을 index로 만들어 새로움 데이터프레임을 만듦
 
-		  강수량 강수확률
+		 강수량 강수확률
 지역	요일		
 서울	월요일	100	 80
-	 화요일  80  70
-     수요일  1000 90
+	 화요일  80  	70
+     	수요일  1000 	90
 경기	월요일	200	10
-	 화요일 200 20
+	 화요일 200 	20
 부산	월요일	100	30
 서울	목요일	50	50
-	 금요일 100 90
+	 금요일 100 	90
 부산	화요일	200	20
 경기	수요일	100	80
 	 목요일 50	 50
-	 금요일 100 10
+	 금요일 100 	10
 
 new_df.unstack(0) #unstack은 index에 쌓인 것을 컬럼으로 변경함
 new_df.unstack(1) #1번 인덱스틑 요일
