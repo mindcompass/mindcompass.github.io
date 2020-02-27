@@ -84,7 +84,7 @@ print(value==input2) #value값과 input값이 동일하기 때문에 True가 출
 
 ```
 
-### 2.exec()함수 활용
+## 2.exec()함수 활용
 
 ```python
 input1, input2 =map(int, input().split())
