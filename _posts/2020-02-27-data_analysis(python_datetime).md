@@ -1,18 +1,18 @@
 ---
-title:  "python을 통한 시계열 데이터 전처리"
-excerpt: "python의 datatime 라이브러리를 통한 시계열 데이터 전처리"
+title:  "대화형 인공지능 챗봇 자료 정리"
+excerpt: "최근 이슈가 되고 있는 대화형 인공지능 관련 기사 스크랩"
 toc: true
 toc_sticky: true
 
 categories:
-  - data_analysis
+  - Interactive AI
 tags:
-- Python
-- datetime
-- time_series
+- Google
+- chatbot
+- 
 - pandas
 use_math: true
-last_modified_at: 2020-02-27
+last_modified_at: 2020-02-28
 ---
 
 datetime 라이브러리는 날짜를 처리하는 time 오브젝트, 시간을 처리하는 time 오브젝트, 날짜와 시간을 모두 처리하는 datetime오브젝트 등을 포함하고 있습니다. 
