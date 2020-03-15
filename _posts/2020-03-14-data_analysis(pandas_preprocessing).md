@@ -31,7 +31,7 @@ df=pd.read_csv('https://raw.githubusercontent.com/jennybc/gapminder/master/inst/
 
 
 df.head() #처음 5행을 확인합니다.
-	country	continent	year	lifeExp	pop		gdpPercap
+	country		continentyear	lifeExp	pop		gdpPercap
 0	Afghanistan	Asia	1952	28.801	8425333		779.445314
 1	Afghanistan	Asia	1957	30.332	9240934		820.853030
 2	Afghanistan	Asia	1962	31.997	10267083	853.100710
@@ -77,6 +77,10 @@ max	2007.00000	82.603000	1.318683e+09	113523.132900
 ```
 
 
+
+
+
+### 2. 연습문제1
 
 그럼 문제를 풀면서 하나씩 전처리 연습을 해봅시다.
 
@@ -159,4 +163,118 @@ df3.plot(kind='bar',title="1960's population in East_asia", rot=1, color=['red',
 
 
 ![그래프](https://i.imgur.com/5C5mTpC.png)
+
+
+
+## 2.연습문제2(melt, pivot_table 연습)
+
+문제1. 데이터 셋 생성
+
+1. 각각 10명의 학생수를 갖는 두 개의 class A, B를 생성한다.
+
+2. 각 클래스의 학생은 id : 1 ~ 10으로 구분된다.
+
+3. 각 학생들에 대해 math, eng, sci 과목에 대한 30 ~ 100 사이의 random 점수를 생성하라.
+
+   최종 scores 데이터 프레임은 아래와 같다.
+
+   
+
+| class | stu  | math | eng  | sci  |
+| :---: | :--: | :--: | :--: | :--: |
+|   A   |  1   |  85  |  92  |  51  |
+|   A   |  2   |  54  |  52  |  42  |
+|   A   |  3   |  89  |  43  |  35  |
+|  ...  | ...  | ...  | ...  | ...  |
+|   B   |  9   |  64  |  67  |  62  |
+|   B   |  10  |  85  |  89  |  42  |
+
+```python
+import pandas as pd
+import numpy as np
+import random
+
+classA=pd.DataFrame({
+'class' :['A']*10,
+'stu' :np.arange(1,11),
+'math' : np.random.randint(30,100,10),
+'eng' : np.random.randint(30,100,10),
+'sci' : np.random.randint(30,100,10),
+}
+)
+
+classB=pd.DataFrame({
+'class' :['B']*10,
+'stu' :np.arange(1,11),
+'math' : np.random.randint(30,100,10),
+'eng' : np.random.randint(30,100,10),
+'sci' : np.random.randint(30,100,10),
+}
+)
+
+data_total=pd.concat([classA,classB])
+```
+
+
+
+문제2. melt 함수를 이용해서 subj 변수를 새롭게 만들고, 그 변수의 값에 'math', 'sci', 'eng'를 갖게 하고, score라는 변수를 만들어 3개의 과목에 대한 각각의 점수를 갖도록 하라(학생별로 3과목이 연달아 오도록 할 것)
+
+| class | stu  | **subj** | score |
+| :---: | :--: | :------: | :---: |
+|   A   |  1   |   math   |  92   |
+|   A   |  1   |   eng    |  52   |
+|   A   |  1   |   sci    |  43   |
+|  ...  | ...  |   ...    |  ...  |
+|   B   |  10  |   math   |  67   |
+|   B   |  10  |   eng    |  65   |
+|   B   |  10  |   sci    |  84   |
+
+
+
+```python
+data_total_melt=pd.melt(data_total, id_vars=['class','stu'],var_name='subj',value_name='score').sort_values('stu')
+```
+
+
+
+문제3.  문제2에서 만든 데이터 프레임을 사용해서 pivot_table을 적용해서 문제1의 데이터 형태로 만들고, 학생별 math, eng, sci의 변수의 평균의 값으로 변수 mean을 생성하라
+
+| class | stu  | math | eng  | sci  | mean |
+| :---: | :--: | :--: | :--: | :--: | :--: |
+|   A   |  1   |  85  |  92  |  51  | 76.0 |
+|   A   |  2   |  54  |  52  |  42  | 49.3 |
+|   A   |  3   |  89  |  43  |  35  | 55.7 |
+|  ...  | ...  | ...  | ...  | ...  | ...  |
+|   B   |  9   |  64  |  67  |  62  | 64.3 |
+|   B   |  10  |  85  |  89  |  42  | 72.0 |
+
+
+
+```python
+data_total2=data_total_melt.pivot_table(index=['class','stu'],values='score',columns='subj')
+
+data_total2=data_total2.reset_index() # pivot_table을 하면서 생성되었던 index(class,stu)을 변수로 변환함
+
+data_total2['mean']=(data_total2['eng']+data_total2['math']+data_total2['sci'])/3
+
+data_total2.drop('index',axis=1,inplace=True)
+```
+
+
+
+문제4.  반별로,상위 5명의 학생에 대해 내림차순으로 나타내라, 아래와 같은 표를 작성하라(평균점수별로 내림차순, class에는 A반 다음,B반이 위치할 것 )
+
+| class | stu  | mean |
+| :---: | :--: | :--: |
+|   A   |  5   |  87  |
+|  ...  | ...  | ...  |
+|   A   |  2   |  42  |
+|   B   |  9   |  81  |
+|  ...  | ...  | ...  |
+|   B   |  7   |  53  |
+
+
+```python
+data_total2.sort_values(by=['class','mean'],ascending=[True,False]).groupby('class').head(5)
+```
 
