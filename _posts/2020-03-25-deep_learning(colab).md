@@ -66,3 +66,20 @@ df.to_csv('/content/gdrive/My Drive/my_data.csv', header=None)
 
 ```
 
+
+
+## 3. 구글 서버에 데이터 올려서 작업하기
+
+딥러닝에 사용할 입력 데이터(예를 들어 csv파일)를 구글 서버에 업로드해야 합니다.  이를 위해서 다음과 같이 작업하면 편리합니다. 
+
+```python
+from google.colab import files # 파일 업로드를 위해 필요한 함수
+uploaded = files.upload() # 파일 업로드
+
+Data_set= pd.read_csv("(파일명).csv",delimiter=",")
+Data_set= np.loadtxt("(파일명).csv",delimiter=",")
+```
+
+
+
+ 
