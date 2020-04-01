@@ -103,7 +103,7 @@ $ pip install beautifulsoup4
 
 
 
-#### 1. KOSPI 정보 가져오기
+1. KOSPI 정보 가져오기
 
 ```python
 import requests
@@ -124,7 +124,7 @@ print(kospi.text)
 
 
 
-#### 2.환율 정보 가져오기
+2.환율 정보 가져오기
 
 ```python
 import requests
@@ -241,9 +241,6 @@ def hello():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-
-
-
 #### 2. hello.py
 
 ##### hello.py 추가 작업 내용 1
@@ -256,12 +253,11 @@ def hi():
     name = "Jason"
     return render_template('hi.html', html_name = name)
 ```
-
 hello.py 같은 폴더 내에 templates이라는 폴더를 만들고 거기에 hi.html파일을 생성한다.
 
 ```html
 <body>
-    <h1>{{html_name}}</h1>
+    <h1>{ {html_name} }</h1>
     <ul>
         <li>스타벅스</li>
         <li>투썸플레이스</li>
@@ -271,7 +267,6 @@ hello.py 같은 폴더 내에 templates이라는 폴더를 만들고 거기에 h
     </ul>
 </body>
 ```
-
 ##### hello.py 추가 작업 내용 2
 
 ```python
@@ -283,12 +278,9 @@ def greeting(name):
 
 ```html
 <body>
-    <h1>만나서 반갑습니다, {{html_name}} 님</h1>
+    <h1>만나서 반갑습니다, { {html_name} } 님</h1>
 </body>
 ```
-
-
-
 ##### hello.py 추가 작업 내용 3
 
 ```python
@@ -296,12 +288,16 @@ def greeting(name):
 def cube(num):
     cube_num = num**3
     return render_template('cube.html', cube_num = cube_num, num = num)
+```
+```html
 <body>
-    <h1>{{num}}의 3제곱은 {{cube_num}}</h1>
+    <h1>{ {num} }의 3제곱은 {{cube_num}}</h1>
     <!-- 아래처럼 html 에서 연산하는 행위는 안정성에 안좋음 -->
     <!-- <h1>{{num}}의 3제곱은 {{num**3}}</h1> -->
 </body>
 ```
+
+
 
 ##### hello.py 추가 작업 내용 4
 
@@ -321,34 +317,33 @@ def dinner():
 
 ```
 
-
-
 ```html
 <body>
-    <h1>오늘 저녁은 {{html_dinner}} 입니다.</h1>
-    <img src="{{html_url}}" alt="{{html_dinner}}" width="400">
+<h1>오늘 저녁은 { {html_dinner} } 입니다.</h1>
+<img src= "{ {html_url} } alt={ {html_dinner} } width="400">
 </body>
 ```
 
-
-
 ##### hello.py 추가 작업 내용 5
 
-```
+```python
 @app.route('/movies')
 def movies():
     movies = ['조커', '겨울왕국2', '터미네이터', '어벤져스']
     return render_template('movies.html', html_movies = movies)
+```
+
+```html
 <body>
     <ul>
     {# jinja 주석입니다. #}
     {% for movie in html_movies %}
         {% if movie == '조커' %}
-            <li>{{movie}} || 재밌음</li>
+            <li>{ {movie} } </li>
         {% elif movie == '겨울왕국2' %}
-            <li>{{movie}} || 올라프 귀염 </li>
+            <li>{ {movie} }  </li>
         {% else %}
-            <li>{{movie}}</li>
+            <li>{ {movie} }</li>
         {% endif %}
     {% endfor %}
     </ul>
@@ -386,13 +381,13 @@ def pong():
 > ```
 
 > pong.html
->
-> ```
-> <body>
->  <h1>Here is Pong!!</h1>
->  {{html_data}}
-> </body>
-> ```
+
+```html
+<body>
+<h1>Here is Pong!!</h1>
+<h2>{ {html_data} }</h2>
+</body>
+```
 
 
 
@@ -436,9 +431,10 @@ def google():
 
 
 
-#### 4,ping_pong.py(연습문제)
+#### 4.ping_pong.py(연습문제)
 
 ```python
+
 from flask import Flask, render_template, request
 from bs4 import BeautifulSoup
 import requests

@@ -71,8 +71,7 @@ sendMessage 기본 사용법
 https://api.telegram.org/bot[봇토큰]/sendmessage?chat_id=[챗아이디]&text=[보낼메시지]
 ```
 
-예를 들어 https://api.telegram.org/bot1132805451:AAG72kfrecgQqWGG7pDwEZxhe3jrRlyy-aY/sendmessage?chat_id=861147265&text=휠리리 라고 전송하면 챗봇이 나에게 휠리리라는 메시지는 전송함
-
+예를 들어" https://api.telegram.org/bot1132805451:AAG72kfrecgQqWGG7pDwEZxhe3jrRlyy-aY/sendmessage?chat_id=861147265&text=휠리리" 라고 전송하면 챗봇이 나에게 휠리리라는 메시지는 전송함
 
 
 인증 키 보안 part1
@@ -102,7 +101,7 @@ https://api.telegram.org/bot[봇토큰]/sendmessage?chat_id=[챗아이디]&text=
 
 
 
-#### a. html 에 form 작성
+a. html 에 form 작성
 
 send.html 작성
 
@@ -139,7 +138,7 @@ wriete.html 작성
 
 
 
-#### b. app.py 작성
+b. app.py 작성
 
 ```python
 from flask import Flask, escape, request, render_template
@@ -178,7 +177,7 @@ git push 할때 일부 파일들을 제외할 수 있도록 gitignore 사용
 
 gitignore.io 에서 venv, Flask, Python, Windows, VisualStudioCode 입력 후 생성버튼을 누르면 텍스트 파일이 화면에 출력
 
-[![gitignore](https://i.imgur.com/KRrMiqZ.png)](https://github.com/yonghyunJay/TIL/blob/master/10_telegrambot.assets/image-20191220111748670.png)
+![gitignore](https://i.imgur.com/KRrMiqZ.png)
 
 텍스트를 복사 후 .gitignore 파일 생성 후 붙여넣기
 
@@ -202,11 +201,11 @@ cmd 창을 열고
 > ngrok.exe http 5000
 ```
 
-[![ngrok](https://i.imgur.com/59BaaNH.png)](https://github.com/yonghyunJay/TIL/blob/master/10_telegrambot.assets/image-20191220132225212.png)
+![ngrok](https://i.imgur.com/59BaaNH.png)
 
 아래와 같은 성공 화면이 뜨고 https://6ff3e494.ngrok.io 로 접속하면 나의 localhost:5000 로 포워딩 해준다는 메세지가 보인다.
 
-#### 텔레그램 setWebhook API 사용
+텔레그램 setWebhook API 사용
 
 > webhook.py 작성
 
