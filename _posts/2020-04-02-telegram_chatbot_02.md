@@ -1,6 +1,6 @@
 ---
-title:  챗봇만들기_특강2(챗봇)
-excerpt: FLASK 연습
+title: 챗봇만들기_특강2(챗봇)
+excerpt: "FLASK 연습"
 toc: true
 toc_sticky: true
 
@@ -14,8 +14,6 @@ tags:
 use_math: true
 last_modified_at: 2020-04-01
 ---
-
-
 
 
 
