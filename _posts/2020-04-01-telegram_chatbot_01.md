@@ -1,5 +1,4 @@
 ---
-
 title:  챗봇만들기_특강1(기초)
 excerpt: python에서 가상환경만들기,가상환경실습, gitignore사용,FLASK 연습
 toc: true
@@ -15,8 +14,6 @@ tags:
 use_math: true
 last_modified_at: 2020-04-01
 ---
-
-
 
 
 
@@ -106,7 +103,7 @@ $ pip install beautifulsoup4
 
 
 
-**1.KOSPI 정보 가져오기**
+1. KOSPI 정보 가져오기
 
 ```python
 import requests
@@ -127,7 +124,7 @@ print(kospi.text)
 
 
 
-**2.환율 정보 가져오기**
+2.환율 정보 가져오기
 
 ```python
 import requests
@@ -145,7 +142,7 @@ print(exchange.text)
 
 
 
-** 3.네이버 헤드라인 뉴스 가지고 오기**
+## 3. 네이버 헤드라인 뉴스 가지고 오기
 
 ```python
 import requests
@@ -195,7 +192,7 @@ https://www.gitignore.io/
 
 Flask는 Python으로 구동할 수 있는 서버 프레임워크입니다.
 
-### 가. flask 설치
+### 1. flask 설치
 
 ```
 $ pip install flask==1.0.0
@@ -221,9 +218,9 @@ $ env FLASK_APP=hello.py flask run
 
 
 
-### 나. 예제
+### 2. 예제
 
-**1. 기본 구조**
+#### 1. 기본 구조
 
 app.py 가 아닌경우 아래와 같이 작업 후 실행 가능
 
@@ -244,25 +241,36 @@ def hello():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-**2. hello.py**
 
-**hello.py 추가 작업 내용 1**
+#### 2. hello.py
+
+##### hello.py 추가 작업 내용 1
 
 ```python
 @app.route('/hi')
 def hi():
     # return "반갑습니다."
     # return "<h1>Hello</h1>"
-    name = "mindcompass_mune"
+    name = "Jason"
     return render_template('hi.html', html_name = name)
 ```
+
 hello.py 같은 폴더 내에 templates이라는 폴더를 만들고 거기에 hi.html파일을 생성한다.
 
-hi.html
+```html
+<body>
+    <h1>{{html_name}}</h1>
+    <ul>
+        <li>스타벅스</li>
+        <li>투썸플레이스</li>
+        <li>엔제리너스</li>
+        <li>이디야</li>
+        <li>빽다방</li>
+    </ul>
+</body>
+```
 
-![](https://i.imgur.com/gZbtPt1.png)
-
-** hello.py 추가 작업 내용 2**
+##### hello.py 추가 작업 내용 2
 
 ```python
 @app.route('/greeting/<string:name>')
@@ -271,11 +279,13 @@ def greeting(name):
     return render_template('greeting.html', html_name = def_name)
 ```
 
-greeting.html
+```html
+<body>
+    <h1>만나서 반갑습니다, {{html_name}} 님</h1>
+</body>
+```
 
-![greeting.html](https://i.imgur.com/MzceAqd.png)
-
-**hello.py 추가 작업 내용 3**
+##### hello.py 추가 작업 내용 3
 
 ```python
 @app.route('/cube/<int:num>')
@@ -283,13 +293,12 @@ def cube(num):
     cube_num = num**3
     return render_template('cube.html', cube_num = cube_num, num = num)
 ```
-cube.html
-
-![cube.html](https://i.imgur.com/CaRGhsR.png)
 
 
 
-**hello.py 추가 작업 내용 4**
+
+
+##### hello.py 추가 작업 내용 4
 
 ```python
 @app.route('/dinner')
@@ -307,151 +316,10 @@ def dinner():
 
 ```
 
-dinner.html
-
-![dinner.html](https://i.imgur.com/8XLrB4n.png)
-
-
-
-**hello.py 추가 작업 내용 5**
-
-```python
-@app.route('/movies')
-def movies():
-    movies = ['조커', '겨울왕국2', '터미네이터', '어벤져스']
-    return render_template('movies.html', html_movies = movies)
-```
-
-movies.html
-
-![movies.html](https://i.imgur.com/f68JBLi.png)
-
-
-
-**다. ping_pong.py**
-
-**ping_pong.py 추가 작업 내용 1 and 2**
-
-```python
-@app.route('/ping')
-def ping():
-    return render_template('ping.html')
-
-@app.route('/pong')
-def pong():
-    # data = request.form.get('keyword')    # post 방식은 form.get()
-    data = request.args.get('keyword')  # get 방식은 args.get()
-    return render_template('pong.html', html_data = data)
-```
-
-ping.html
-
 ```html
 <body>
-<h1>Here is Ping!!</h1>
-<form action="/pong">
-<input type="text" name="keyword">
-<input type="submit">
-</form>
+<h1>오늘 저녁은 {{html_dinner}} 입니다.</h1>
+<img src= "{{html_url}} alt={{html_dinner}} width="400">
 </body>
 ```
 
- pong.html
-
-![pong.html](https://i.imgur.com/VZez54L.png)
-
-**ping_pong.py 추가 작업 내용 3 and 4**
-
- ```python
-@app.route('/naver')
-def naver():
-    data = request.args.get('query')
-    return render_template('naver.html', html_data = data)
-
-@app.route('/google')
-def google():
-    data = request.args.get('q')
-    return render_template('google.html', html_data = data)
- ```
-
-naver.html
-
- ```html
- <body>
-  <h1>Naver</h1>
-  <form action="https://search.naver.com/search.naver">
-      <input type="text" name="query">
-      <input type="submit">
-  </form>
- </body>
- ```
-
- google.html
-
- ```html
- <body>
-  <h1>Google</h1>
-  <form action="https://www.google.com/search">
-      <input type="text" name="q">
-     <input type="submit">
-  </form>
-</body>
- ```
-
-
-
-** 라.ping_pong.py(연습문제)**
-
-```python
-from flask import Flask, render_template, request
-from bs4 import BeautifulSoup
-import requests
-
-app = Flask(__name__)
-
-@app.route('/search')
-def search():
-    return render_template('search_opgg.html')
-
-@app.route('/opgg')
-def opgg():
-    userName = request.args.get('userName')
-    url = f"http://www.op.gg/summoner/userName={userName}"
-    req = requests.get(url).text
-    soup = BeautifulSoup(req, 'html.parser')
-    
-    tier = soup.select_one('#SummonerLayoutContent > div.tabItem.Content.SummonerLayoutContent.summonerLayout-summary > div.SideContent > div.TierBox.Box > div > div.TierRankInfo > div.TierRank')
-
-    win = soup.select_one('#SummonerLayoutContent > div.tabItem.Content.SummonerLayoutContent.summonerLayout-summary > div.SideContent > div.TierBox.Box > div > div.TierRankInfo > div.TierInfo > span.WinLose > span.wins')
-
-    return render_template('opgg.html', name = userName, tier = tier.text, win = win.text[: - 1], url = url)
-
-if __name__ == ("__main__"):
-    app.run(debug=True)
-```
-
-
-
-search_opgg.html
-
-```html
-<body>
- <h1>롤 아이디를 입력하세요 </h1>
- <form action="/opgg">
-     <input type="text" name="userName">
-     <input type="submit" value="검색">
- </form>
-</body>
-```
-
-
-
-![opgg.html](https://i.imgur.com/jj6J1Ob.png)
-
-위 코드 결과는 아래와 같습니다.
-
-![](https://i.imgur.com/ANEFEtv.png)
-
-
-
-![](https://i.imgur.com/seByn0W.png)
