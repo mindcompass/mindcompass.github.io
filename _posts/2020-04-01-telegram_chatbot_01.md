@@ -195,7 +195,7 @@ https://www.gitignore.io/
 
 Flask는 Python으로 구동할 수 있는 서버 프레임워크입니다.
 
-### 1. flask 설치
+### 가. flask 설치
 
 ```
 $ pip install flask==1.0.0
@@ -221,7 +221,7 @@ $ env FLASK_APP=hello.py flask run
 
 
 
-### 2. 예제
+### 나. 예제
 
 **1. 기본 구조**
 
@@ -244,7 +244,7 @@ def hello():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-** 2. hello.py**
+**2. hello.py**
 
 **hello.py 추가 작업 내용 1**
 
@@ -289,7 +289,7 @@ cube.html
 
 
 
-** hello.py 추가 작업 내용 4**
+**hello.py 추가 작업 내용 4**
 
 ```python
 @app.route('/dinner')
@@ -313,7 +313,7 @@ dinner.html
 
 
 
-** hello.py 추가 작업 내용 5**
+**hello.py 추가 작업 내용 5**
 
 ```python
 @app.route('/movies')
@@ -328,7 +328,7 @@ movies.html
 
 
 
-**3. ping_pong.py**
+**다. ping_pong.py**
 
 **ping_pong.py 추가 작업 내용 1 and 2**
 
@@ -400,7 +400,7 @@ naver.html
 
 
 
-** 4.ping_pong.py(연습문제)**
+** 라.ping_pong.py(연습문제)**
 
 ```python
 from flask import Flask, render_template, request
