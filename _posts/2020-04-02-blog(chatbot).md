@@ -39,7 +39,7 @@ last_modified_at: 2020-04-02
 
 ## 1. 활용사례
 
-- 동신대, 학사행정 운영 도입
+**가. 동신대, 학사행정 운영 도입**
 
 수강신청과 장학금 문의 등  학사 행정에 관한 궁금증은  시간과 장소에 관계 없이  챗봇이 안내해줍니다.
 
@@ -47,37 +47,37 @@ last_modified_at: 2020-04-02
 
 
 
-- 커피숍에서 음료 주문받기
+**나. 커피숍에서 음료 주문받기**
 
 [![구글 DialogFlow로 챗봇 만들기](http://img.youtube.com/vi/IcS3fLpkrow/0.jpg)](https://www.youtube.com/watch?v=IcS3fLpkrow?t=0s)
 
 
 
-- AI와 챗봇을 통한 업무 자동화 사례
+**다. AI와 챗봇을 통한 업무 자동화 사례**
 
-  Techtonic 2018에서 다룬 삼성SDS 사례
+Techtonic 2018에서 다룬 삼성SDS 사례
 
-   [주요내용] 
-  
-  - Why 봇? 
-  - 소프트웨어 로봇의 용도 
-  - 챗봇과 IPA를 도입하는 고객들의 고민 
-  -  AI 기반 대화형 업무 자동화 
-  -  업무 자동화 기술 요소(딥러닝, 머신러닝, NLP, NLU등) 
-  -  적용사례 1 : 물류 트래킹 업무 
-  - 적용사례 2 : ChatOps  - 적용사례 3 : 공정 실적 레포트 작성(제조)
+ [주요내용] 
+
+- Why 봇? 
+- 소프트웨어 로봇의 용도 
+- 챗봇과 IPA를 도입하는 고객들의 고민 
+-  AI 기반 대화형 업무 자동화 
+-  업무 자동화 기술 요소(딥러닝, 머신러닝, NLP, NLU등) 
+-  적용사례 1 : 물류 트래킹 업무 
+- 적용사례 2 : ChatOps  - 적용사례 3 : 공정 실적 레포트 작성(제조)
 
 [![구글 DialogFlow로 챗봇 만들기](http://img.youtube.com/vi/BnR22KLiG0k/0.jpg)](https://www.youtube.com/watch?v=BnR22KLiG0k?t=0s)
 
 
 
-- 텐서플로우, Seq2Seq 기술을 접목한 Chatbot(학생사례)
+**라. 텐서플로우, Seq2Seq 기술을 접목한 Chatbot(학생사례)**
 
-  텐서플로우와 RNN모델인 Seq2Seq를 사용해서 대화가능한 챗봇을 만들었네요.
+텐서플로우와 RNN모델인 Seq2Seq를 사용해서 대화가능한 챗봇을 만들었네요.
 
-  이 영상만 가지고 실제 어느 정도 기술이 적용됐는지 포괄적으로 판단하기는 어렵습니다. 
+이 영상만 가지고 실제 어느 정도 기술이 적용됐는지 포괄적으로 판단하기는 어렵습니다. 
 
-  동영상에서 제시한 특정 몇 가지 조건만 집중적으로 학습을 했을 수도 있기 때문이죠.
+동영상에서 제시한 특정 몇 가지 조건만 집중적으로 학습을 했을 수도 있기 때문이죠.
 
 [![텐서플로우, Seq2Seq 기술을 접목한 Chatbot](http://img.youtube.com/vi/LGWlaNZBScc/0.jpg)](https://www.youtube.com/watch?v=LGWlaNZBScc?t=0s)
 
@@ -89,17 +89,17 @@ last_modified_at: 2020-04-02
 
 ## 2. 챗봇관련 강의 영상
 
-- 네이버 크라우드 챗봇 구축하기
+**가.네이버 크라우드 챗봇 구축하기**
 
-  네이버 인공지능 플랫폼 클로바에서 챗봇을 구축하는 내용이 들어있는 영상
+네이버 인공지능 플랫폼 클로바에서 챗봇을 구축하는 내용이 들어있는 영상
 
 [![네이버 크라우드 챗봇 구축하기](http://img.youtube.com/vi/rGLAjjmboSw/0.jpg)](https://www.youtube.com/watch?v=rGLAjjmboSw?t=0s)
 
 
 
-- 구글 DialogFlow로 챗봇 만들기
+**나.구글 DialogFlow로 챗봇 만들기**
 
-  챗봇에 기본 개념을 설명하고 있는 영상
+챗봇에 기본 개념을 설명하고 있는 영상
 
 
 
