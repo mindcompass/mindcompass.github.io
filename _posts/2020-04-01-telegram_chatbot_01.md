@@ -18,6 +18,8 @@ last_modified_at: 2020-04-01
 
 
 
+
+
 올해 초 멀티캠퍼스 특강에서 배웠던 chatbot만들기 수업을 정리하려고 합니다. 
 
 
@@ -104,7 +106,7 @@ $ pip install beautifulsoup4
 
 
 
-##### 1.KOSPI 정보 가져오기
+**1.KOSPI 정보 가져오기**
 
 ```python
 import requests
@@ -125,7 +127,7 @@ print(kospi.text)
 
 
 
-##### 2.환율 정보 가져오기
+**2.환율 정보 가져오기**
 
 ```python
 import requests
@@ -143,7 +145,7 @@ print(exchange.text)
 
 
 
-##### 3.네이버 헤드라인 뉴스 가지고 오기
+** 3.네이버 헤드라인 뉴스 가지고 오기**
 
 ```python
 import requests
@@ -221,7 +223,7 @@ $ env FLASK_APP=hello.py flask run
 
 ### 2. 예제
 
-#### 1. 기본 구조
+**1. 기본 구조**
 
 app.py 가 아닌경우 아래와 같이 작업 후 실행 가능
 
@@ -242,9 +244,9 @@ def hello():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-#### 2. hello.py
+** 2. hello.py**
 
-##### hello.py 추가 작업 내용 1
+**hello.py 추가 작업 내용 1**
 
 ```python
 @app.route('/hi')
@@ -260,7 +262,7 @@ hi.html
 
 ![](https://i.imgur.com/gZbtPt1.png)
 
-##### hello.py 추가 작업 내용 2
+** hello.py 추가 작업 내용 2**
 
 ```python
 @app.route('/greeting/<string:name>')
@@ -273,7 +275,7 @@ greeting.html
 
 ![greeting.html](https://i.imgur.com/MzceAqd.png)
 
-##### hello.py 추가 작업 내용 3
+**hello.py 추가 작업 내용 3**
 
 ```python
 @app.route('/cube/<int:num>')
@@ -287,7 +289,7 @@ cube.html
 
 
 
-##### hello.py 추가 작업 내용 4
+** hello.py 추가 작업 내용 4**
 
 ```python
 @app.route('/dinner')
@@ -311,7 +313,7 @@ dinner.html
 
 
 
-##### hello.py 추가 작업 내용 5
+** hello.py 추가 작업 내용 5**
 
 ```python
 @app.route('/movies')
@@ -326,9 +328,9 @@ movies.html
 
 
 
-#### 3. ping_pong.py
+**3. ping_pong.py**
 
-##### ping_pong.py 추가 작업 내용 1 and 2
+**ping_pong.py 추가 작업 내용 1 and 2**
 
 ```python
 @app.route('/ping')
@@ -358,7 +360,7 @@ ping.html
 
 ![pong.html](https://i.imgur.com/VZez54L.png)
 
-##### ping_pong.py 추가 작업 내용 3 and 4
+**ping_pong.py 추가 작업 내용 3 and 4**
 
  ```python
 @app.route('/naver')
@@ -398,7 +400,7 @@ naver.html
 
 
 
-#### 4.ping_pong.py(연습문제)
+** 4.ping_pong.py(연습문제)**
 
 ```python
 from flask import Flask, render_template, request
