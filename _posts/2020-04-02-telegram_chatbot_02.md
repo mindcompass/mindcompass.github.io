@@ -102,7 +102,7 @@ https://api.telegram.org/bot[봇토큰]/sendmessage?chat_id=[챗아이디]&text=
 
 
 
-#### a. html 에 form 작성
+**a. html 에 form 작성**
 
 send.html 작성
 
@@ -139,7 +139,7 @@ wriete.html 작성
 
 
 
-#### b. app.py 작성
+**b. app.py 작성**
 
 ```python
 from flask import Flask, escape, request, render_template
@@ -206,7 +206,7 @@ cmd 창을 열고
 
 아래와 같은 성공 화면이 뜨고 https://6ff3e494.ngrok.io 로 접속하면 나의 localhost:5000 로 포워딩 해준다는 메세지가 보인다.
 
-#### 텔레그램 setWebhook API 사용
+**텔레그램 setWebhook API 사용**
 
 > webhook.py 작성
 
