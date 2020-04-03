@@ -104,7 +104,7 @@ $ pip install beautifulsoup4
 
 
 
-1. KOSPI 정보 가져오기
+##### 1.KOSPI 정보 가져오기
 
 ```python
 import requests
@@ -125,7 +125,7 @@ print(kospi.text)
 
 
 
-2.환율 정보 가져오기
+##### 2.환율 정보 가져오기
 
 ```python
 import requests
@@ -143,7 +143,7 @@ print(exchange.text)
 
 
 
-3. 네이버 헤드라인 뉴스 가지고 오기
+##### 3.네이버 헤드라인 뉴스 가지고 오기
 
 ```python
 import requests
