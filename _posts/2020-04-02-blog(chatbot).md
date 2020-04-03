@@ -1,6 +1,6 @@
 ---
-title:  챗봇관련 정보
-excerpt: 현재 챗봇이 어떻게 쓰이고 있는지 여러 가지고 확인
+title:  챗봇의 필요성과 활용 사례
+excerpt: 현재 챗봇이 어떻게 쓰이고 있는지 몇 가지 사례를 확인함
 toc: true
 toc_sticky: true
 
@@ -57,7 +57,15 @@ last_modified_at: 2020-04-02
 
   Techtonic 2018에서 다룬 삼성SDS 사례
 
-   [주요내용] - Why 봇? - 소프트웨어 로봇의 용도 - 챗봇과 IPA를 도입하는 고객들의 고민 - AI 기반 대화형 업무 자동화 - 업무 자동화 기술 요소(딥러닝, 머신러닝, NLP, NLU등) - 적용사례 1 : 물류 트래킹 업무 - 적용사례 2 : ChatOps  - 적용사례 3 : 공정 실적 레포트 작성(제조)
+   [주요내용] 
+  
+  - Why 봇? 
+  - 소프트웨어 로봇의 용도 
+  - 챗봇과 IPA를 도입하는 고객들의 고민 
+  -  AI 기반 대화형 업무 자동화 
+  -  업무 자동화 기술 요소(딥러닝, 머신러닝, NLP, NLU등) 
+  -  적용사례 1 : 물류 트래킹 업무 
+  - 적용사례 2 : ChatOps  - 적용사례 3 : 공정 실적 레포트 작성(제조)
 
 [![구글 DialogFlow로 챗봇 만들기](http://img.youtube.com/vi/BnR22KLiG0k/0.jpg)](https://www.youtube.com/watch?v=BnR22KLiG0k?t=0s)
 
