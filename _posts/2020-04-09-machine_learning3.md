@@ -1,7 +1,7 @@
 ---
 
-title: 머신러닝 수업 3강
-excerpt: 머신러닝 수업 4월 9일 멀티캠퍼스 강의
+title: 머신러닝 수업 4강
+excerpt: 머신러닝 수업 4월 10일 멀티캠퍼스 강의
 toc: true
 toc_sticky: true
 
@@ -14,142 +14,267 @@ tags:
 - 
 - 
 use_math: true
-last_modified_at: 2020-04-09
+last_modified_at: 2020-04-10
 ---
 
 
 
-오늘은 3번째  수업입니다. 
+오늘은 4번째  수업입니다. 
 
 
 
-## 1.데이터 분석 실습(MNIST, WEATHER데이터)
+## 1. 최적화(Optimizer) 알고리즘
 
-**가. MNIST 데이터 분석**
+가. 모멘텀 : 기존 경사하강법(GD)에 물리법칙인 (중력?) 가속도 개념을 추가한다.  
 
-- 보통 학습률을 0.1~0.3정도를 사용함
+나. AdaGrad : 학습률이 너무 잘을 경우 -> 학습 시간이 오래걸런다. 
 
-Mnist데이터에 대한 파이썬으로 직접 날 코드로 짠 코드에 대해서 러닝레이트를 조절해서 정확도를 계산함
+학습률이 클 경우 -> 제대로 된 학습이 어렸다.
 
-- 1 epoch 일때 : lr이 0.3일 때 94.7 /  lr이 0.1일때 0.9506 /  lr이 0.2 일때 0.9496 (이 수치는 사람마다 달라질 수 있음)
+학습률을 점차 감소(learning rate decay) 시킴으로서 해당 문제를 해결한다.
 
-- 5 epoch 일때 :  lr이 0.3일 때 0.9521 
+다. Adam : 모멘텀과 AdaGrad을 혼합해서 만들 것으로, 진행 
 
 
 
-**quiz :  위 내용을 행렬의 수식으로 표현하기**
+**참고 머신러닝 공부순서** 
 
-![](https://i.imgur.com/74up5nU.png)
+1. Machine Learning
+2. Perceptron
+3. MNIST with MLP
+4. CNN with MLP
+5. Tensorflow and Keras (Keras를 사용하면 쉽게 코딩 가능함)
+6. CNN with Tensorflow (CIFAR-10, Fashion MNIST)
+7. RNN(언어 처리에는 한가지 단어나 문장으로 학습되지 않기 때문에, RNN이 많이 사용됨)
+8. NLP
+9. GAN
+10. Deep Reinforcement Learning
 
-w(3x2행렬) input(3x1행렬) 인데, 연산을 위해서 w(2x3 행렬) input(3x1행렬) 로 변경함
 
 
+**LAB Titanic 자료 개괄적 내용 확인**
 
-**나. WEATHER 데이터 분석**
 
-사용 데이터 : temp10years.csv, winequality-white.csv 
 
-앞의 
+## 2.Tensorflow
 
+Tensor를 전달(Flow)하면서 머신러닝과 딥러닝 알고리즘을 수행하는 라이브러리
+- Scalar: 하나의 숫자, rank 0 tensor
+- Vector: 1차원 배열, 연속적인 숫자들의 집합, rank 1 tensor
+- Matrix: 2차원 배열, 행렬 형태의 숫자들의 집합, rank 2 tensor
+- Tensor: 3차원 배열, rank 3 tensor  (3차원 이상)
 
+텐서플로우 2.0는 바로 결과가 나오지만, 텐서플로우 1.0에서는 세션을 생성하는 것처럼 별도의 조치가 필요함
 
+속도는 1.X버전이 2.0보다 빠른 경향이 있음-> 개발과정에서 초기에는 2. 버전으로 하고, 추후 최종 모델을 구성할 때 1.버전으로 어노테이션을 통해 사용할 수 있음
 
+tensorflow1.15를 사용하기 위해서 설치함
 
-## 2. CNN
+```python
+pip install tensorflow==1.15 
+```
 
-**가. CNN을 사용하는 이유? **
+**가. 실습**
 
-기본적으로 신경망학습을 하게 되면 이미지 위치, 정확한 색깔 등을 학습하게 됨
+![](https://i.imgur.com/hY2T3Em.png)
 
-이미지 위치가 달라지거나 왜곡된 경우에는 올바르게 작동하지 못함
+**가. tensorflow_demo4실습**
 
-학습 내용과 정확한 크기, 색깔이 적용되야 예측할 수 있음 -> 실사용에 제한적임
+Y=w*X+b 에 데이터 x_data = [1, 2, 3], y_data = [1, 2, 3] 를 넣고 점차 Y=X에 가까워줘지는 과정
 
-학습을 할 경우 **전반적인 특징(패턴)**을 학습하기 위해서 filter을 사용하여 학습함-> CNN방식 
 
-합성곱 신경망 => 필터를 사용해서 이미지의 특징을 추출
 
-![](https://i.imgur.com/UQHKrQm.png)
+**나. tensorflow_demo4 변형된 실습(TF1 Linear Regression)**
 
-**나. CNN 방식의 과정**
+```python
+#Linear Regreesion
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
 
-![](https://i.imgur.com/7v5BRez.png)
+tf.enable_eager_execution() #Seesion을 자동으로 수행하도록 함
 
-Pooling은 특징을 뽑아 내는 과정 -> 데이터가 너무 많아서 특징에 집중해서 데이터를 축약합니다.
+tf.__version__
 
+X = np.array([1,2,3], dtype="float32")
+Y = np.array([2, 2.5, 3.5], dtype="float32")
 
+W = tf.Variable([2], dtype="float32")
+b = tf.Variable([1], dtype="float32")
 
-**다. CNN 필터의 원리** 
+learning_rate = 0.1
 
-이미지 분석에서 kernal이라고 하면 os의  kernal이 아니라 이미지 추출하는 요소, 일종의 필터
-
-아래를 보면 3x3의 필터(커널)을 통해  1x1형태로 변경되는 것으로 볼 수 있습니다.  
-
-이미지 합성을 위해 필터를 통한 합성곱의 값을 이용하게 됩니다. 
-
-
-
-[cnn의 원리인 필터의 원리를 이해하기 쉬운 사이트](https://setosa.io/ev/image-kernels/)
-
-![](https://i.imgur.com/8fBdCJN.png)
-
-
-
-![](https://i.imgur.com/GYqRkNt.png)
-
-
-
-**다. Pooling의 원리** 
-
-필터 2x2로 pooling을 하게 되면 원래 이미지의 25%로 변경됨
-
-특징을 추출하기 위해서 필터를 사용함
-
-
-
-![](https://i.imgur.com/AfcZ0hW.png)
-
-**Quiz 연습문제 핸즈온 머신러닝 p152 연습문제 풀기( 03_classification.ipynb)**
-
-
-
-[이미지 CNN학습 과정을 볼 수 있는 사이트](https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html)
-
-아래 자동차에 대한 학습과정은 필터의 종류가 16개로 CNN 작업을 수행하고 있습니다. 
-
-![](https://i.imgur.com/zfmwhop.png)
-
-왜 풀링을 하는가?
-
-Why convolution followed by pooling?
-- The input image shrinks
-
-- Since filters stay the same size, they find increasingly large patterns
-  (relative to the image)
-
-- This is why CNNs learn hierarchical features
+for i in range(100):
+    with tf.GradientTape() as tape:
+        hypothesis = W * X + b
+        print("hypothesis : ", hypothesis)
+        cost = tf.reduce_mean(tf.square(hypothesis - Y))
+        print("cost : ", cost)
+        
+    W_grad, b_grad = tape.gradient(cost, [W, b])
+    print("W_grad : ", W_grad, "b_grad : ", b_grad)
+    W.assign_sub(W_grad * learning_rate)
+    b.assign_sub(b_grad * learning_rate)
+
+print("i={}, W={}, b={}, cost={}".format(i, W.numpy(), b.numpy(), cost))
+
+plt.plot(X, Y, marker='o')
+plt.plot(X, hypothesis.numpy(), mfc='r', ls='-')
+plt.ylim(0, 4)
+
+print("X=10, Y =", W*10+b)
+```
+
+
+
+**다. TF1 Linear Regression_2 실습**
+
+- 회귀를 통해 학습함 데이터는 아래와 같음(25, 4)
+
+  ```python
+  	0	1	2	3
+  0	73	80	75	152
+  1	93	88	93	185
+  2	89	91	90	180
+  3	96	98	100	196
+  4	73	66	70	142
+  5	53	46	55	101
+  6	69	74	77	149
+  7	47	56	60	115
+  8	87	79	90	175
+  9	79	70	88	164
+  10	69	70	73	141
+  11	70	65	74	141
+  12	93	95	91	184
+  13	79	80	73	152
+  14	70	73	78	148
+  15	93	89	96	192
+  16	78	75	68	147
+  17	81	90	93	183
+  18	88	92	86	177
+  19	78	83	77	159
+  20	82	86	90	177
+  21	86	82	89	175
+  22	78	83	85	175
+  23	76	83	71	149
+  24	96	93	95	192
+  ```
+
+  ```python
+  import tensorflow as tf
+  import numpy as np
+  
+  loaded_data = np.loadtxt('./datasets/data-01.csv', delimiter=',')
+  
+  x_data = loaded_data[ :, 0:-1]
+  t_data = loaded_data[ :, [-1]]
+  
+  print("x_data.shape = ", x_data.shape)
+  print("t_data.shape = ", t_data.shape)
+  
+  
+  W = tf.Variable(tf.random_normal([3, 1]))  # 가중치 노드
+  b = tf.Variable(tf.random_normal([1]))     # 바이어스 노드
+  
+  X = tf.placeholder(tf.float32, [None, 3])  # None 은 총 데이터 갯수
+  T = tf.placeholder(tf.float32, [None, 1])  # 정답데이터 노드
+  
+  y = tf.matmul(X, W) + b  # 현재 X, W, b, 를 바탕으로 계산된 값
+  
+  loss = tf.reduce_mean(tf.square(y - T))  # MSE 손실함수 정의
+  
+  
+  learning_rate = 1e-5    # 학습률
+  
+  optimizer = tf.train.GradientDescentOptimizer(learning_rate)
+  
+  train = optimizer.minimize(loss)
+  
+  
+  with  tf.Session()  as sess:
+      
+      sess.run(tf.global_variables_initializer())  # 변수 노드(tf.Variable) 초기화
+  
+      for step in range(8001):
+        
+          loss_val, y_val, _ = sess.run([loss, y, train], feed_dict={X: x_data, T: t_data})    
+          
+          
+          if step % 400 == 0:
+              print("step = ", step, ", loss_val = ", loss_val)             
+      
+      print("\nPrediction is ", sess.run(y, feed_dict={X: [ [100, 98, 81] ]}))
+  ```
 
   
 
-![](https://i.imgur.com/cF6EPyi.png)
+**라. tensorflow_demo5, tensorflow_demo6 실습**
+
+털과 날개가 있는 지에 따라 포유류, 조류, 기타로 구분하는 예제
+
+demo5 일반적 경사 하강법/ demo6 일 경우 adam을 사용 
+
+100동안 학습함
 
 
 
-![](https://i.imgur.com/oe6oLHH.png)
+ demo5
 
-대각선 필터일 때 풀링한 값이 가장 크다. -> 이미지의 대각선적인 특징적 요소가 강함
+```python
+10 1.1499085
+20 1.1484753
+30 1.1470655
+40 1.1456794
+50 1.1443158
+60 1.142975
+70 1.1416563
+80 1.1403594
+90 1.1390839
+100 1.1378294
+예측값: [0 0 0 0 0 0]
+실제값: [0 1 2 0 0 2]
+정확도: 50.00
+```
 
 
 
-**라. 색상이 포함된 CNN**
+demo6
 
-이미지 각 색상에 포함된 3개의 이미지 층과 각 3개의 필터가 연산된 뒤에 2차원 평면으로 값이 구성됨
+```python
+0 1.043826
+20 0.78632826
+30 0.60678333
+40 0.47447774
+50 0.37049028
+60 0.28830346
+70 0.2246506
+80 0.17515421
+90 0.13745208
+100 0.10897764
+예측값: [0 1 2 0 0 2]
+실제값: [0 1 2 0 0 2]
+정확도: 100.00
+```
 
-![](https://i.imgur.com/wK6nErJ.png)
-
-![](https://i.imgur.com/aLjR9s4.png)
-
-민약 컬러 필터의 갯수가 여러개면 여러개의  2차원 평면에 대한 필터수 만큼의 결과가 형성됨
 
 
+**마. Mnist 분석 실습 **
+
+
+
+**바. TF1 ANN AND.ipynb**
+
+
+
+**사.TF1 Keras_1.ipynb**
+
+
+
+**아. TF1 Keras ANN AND **
+
+코드양이 매우 적어짐 
+
+
+
+**자. CNN_demo0 수행**
 
