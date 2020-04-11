@@ -19,7 +19,9 @@ last_modified_at: 2020-04-11
 
 
 
+<br>
 
+<br>
 
 올해 초 멀티캠퍼스에서 자바 프로그램을 배운 뒤 수행했던 첫 번째 프로젝트 내용을 공유드립니다. 
 
@@ -36,6 +38,8 @@ Email과 password는 Sign up에서 등록하시면 됩니다.
 
 
 
+
+<br>
 
 ## 1. 다나와보쇼(프로젝트명) 개요
 
@@ -54,6 +58,8 @@ Email과 password는 Sign up에서 등록하시면 됩니다.
 
 
 
+
+<br>
 
 **나. 어떤 기술이 쓰였나요?**
 
@@ -75,6 +81,8 @@ Bootstrap4.0
 
 
 
+<br>
+
 **다. API를 사용한 사이트**
 
 아래 총 6가지 사이트의 API를 사용했습니다. 
@@ -91,6 +99,8 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 
 
 
+<br>
+
 가. Signin(로그인)/메인페이지**
 
 주소를 치고 들어가면 가장 먼저 있는 항목입니다. 아이디, 비번은 각각 1234로 하시면 들어갈 수 있습니다. 
@@ -101,6 +111,8 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 
 
 
+<br>
+
 **나. Signup 페이지/ 새롭게 아이디 등록**
 
 이메일주소(아이디), 비번, 이름을 등록하는 페이지 입니다. 
@@ -110,6 +122,8 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 
 
 
+
+<br>
 
 **다. Main화면**
 
@@ -129,6 +143,8 @@ PC화면에는 3열씩 배열되어 있고, 스마트폰화면은 1열씩 콘텐
 
 
 
+<br>
+
 **라. 즐겨찾기 페이지/스크랩 페이지**
 
 메인화면에서 '+'로 스크랩한 콘텐츠를 한번에 보실 수 있습니다. 
@@ -142,6 +158,8 @@ PC화면에는 3열씩 배열되어 있고, 스마트폰화면은 1열씩 콘텐
 
 
 
+
+<br>
 
 **마.Setting_keyword 페이지**
 
@@ -159,6 +177,8 @@ save를 누르신 다음 **HOME 버튼**을 눌러 Main화면으로 이동하시
 
 
 
+<br>
+
 **바. Setting_user 페이지**
 
 처음 등록한 user정보를 변경할 수 있는 페이지입니다.  
@@ -168,6 +188,8 @@ save를 누르신 다음 **HOME 버튼**을 눌러 Main화면으로 이동하시
 
 
 
+
+<br>
 
 **사. About us 페이지**
 
