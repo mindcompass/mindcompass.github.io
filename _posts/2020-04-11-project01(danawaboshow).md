@@ -31,7 +31,7 @@ Email과 password는 Sign up에서 등록하시면 됩니다.
 
 그냥 들어가고 싶은 분은 Email과 password에 각각 1234를 입력해주세요. 
 
-![프로젝트1_다나와보쇼](https://i.imgur.com/CguGebx.png)
+![프로젝트1_다나와보쇼](https://i.imgur.com/Yq7LYeS.jpg)
 
 
 
@@ -85,7 +85,7 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 
 주소를 치고 들어가면 가장 먼저 있는 항목입니다. 아이디, 비번은 각각 1234로 하시면 들어갈 수 있습니다. 
 
-![signin페이지](https://i.imgur.com/Ckfakjr.png)
+![signin페이지](https://i.imgur.com/mP1Fbxe.jpg)
 
 
 
@@ -93,7 +93,7 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 
 이메일주소(아이디), 비번, 이름을 등록하는 페이지 입니다. 
 
-![Signup 페이지](https://i.imgur.com/Ex7KeIc.png)
+![Signup 페이지](https://i.imgur.com/n7NmRz6.jpg)
 
 
 
@@ -109,7 +109,7 @@ PC화면에는 3열씩 배열되어 있고, 스마트폰화면은 1열씩 콘텐
 
 콘텐츠 상담에 빨간색으로 '+'으로 되어 있는 곳을 누르시면 즐겨찾기에 저장됩니다.
 
-![Main화면](https://i.imgur.com/CF6Af84.png)
+![Main화면](https://i.imgur.com/SgVzzhS.jpg)
 
 
 
@@ -121,7 +121,7 @@ PC화면에는 3열씩 배열되어 있고, 스마트폰화면은 1열씩 콘텐
 
 '-'누르면 스크랩한 자료가 삭제됩니다. 
 
-![즐겨찾기페이지](https://i.imgur.com/MybO7s8.png)
+![즐겨찾기페이지](https://i.imgur.com/Cy1ZiIn.jpg)
 
 
 
@@ -135,7 +135,7 @@ Keyword는 최대 5가지 설정할 수 있고, 검색엔진은 총 6가지 사�
 
 save를 누르신 다음 **HOME 버튼**을 눌러 Main화면으로 이동하시면 됩니다.
 
-![](https://i.imgur.com/G2TBJnz.png)
+![Setting_keyword ](https://i.imgur.com/fXmxj8r.jpg)
 
 
 
@@ -143,7 +143,7 @@ save를 누르신 다음 **HOME 버튼**을 눌러 Main화면으로 이동하시
 
 처음 등록한 user정보를 변경할 수 있는 페이지입니다.  
 
-![Setting_user 페이지**](https://i.imgur.com/upRn9ye.png)
+![Setting_user 페이지](https://i.imgur.com/HtwY9sf.jpg)
 
 
 
@@ -151,4 +151,4 @@ save를 누르신 다음 **HOME 버튼**을 눌러 Main화면으로 이동하시
 
 함께 개발한 다른 팀원들의 화면이 나와있습니다.
 
-![](https://i.imgur.com/57SQ7YW.png)
+![About us](https://i.imgur.com/0X0hr8h.jpg)
