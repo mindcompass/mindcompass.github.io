@@ -53,6 +53,8 @@ Email과 password는 Sign up에서 등록하시면 됩니다.
 
 
 
+
+
 **나. 어떤 기술이 쓰였나요?**
 
 개발하는데 아래 기술들이 사용되었습니다. 
@@ -71,6 +73,8 @@ Bootstrap4.0
 
  
 
+
+
 **다. API를 사용한 사이트**
 
 아래 총 6가지 사이트의 API를 사용했습니다. 
@@ -79,13 +83,21 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 
 
 
+
+
 ## 2. 다나와보쇼 기능 안내
 
-**가. Signin(로그인)/메인페이지**
+
+
+
+
+가. Signin(로그인)/메인페이지**
 
 주소를 치고 들어가면 가장 먼저 있는 항목입니다. 아이디, 비번은 각각 1234로 하시면 들어갈 수 있습니다. 
 
 ![signin페이지](https://i.imgur.com/mP1Fbxe.jpg)
+
+
 
 
 
@@ -94,6 +106,8 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 이메일주소(아이디), 비번, 이름을 등록하는 페이지 입니다. 
 
 ![Signup 페이지](https://i.imgur.com/n7NmRz6.jpg)
+
+
 
 
 
@@ -113,6 +127,8 @@ PC화면에는 3열씩 배열되어 있고, 스마트폰화면은 1열씩 콘텐
 
 
 
+
+
 **라. 즐겨찾기 페이지/스크랩 페이지**
 
 메인화면에서 '+'로 스크랩한 콘텐츠를 한번에 보실 수 있습니다. 
@@ -122,6 +138,8 @@ PC화면에는 3열씩 배열되어 있고, 스마트폰화면은 1열씩 콘텐
 '-'누르면 스크랩한 자료가 삭제됩니다. 
 
 ![즐겨찾기페이지](https://i.imgur.com/Cy1ZiIn.jpg)
+
+
 
 
 
@@ -139,11 +157,15 @@ save를 누르신 다음 **HOME 버튼**을 눌러 Main화면으로 이동하시
 
 
 
+
+
 **바. Setting_user 페이지**
 
 처음 등록한 user정보를 변경할 수 있는 페이지입니다.  
 
 ![Setting_user 페이지](https://i.imgur.com/HtwY9sf.jpg)
+
+
 
 
 
