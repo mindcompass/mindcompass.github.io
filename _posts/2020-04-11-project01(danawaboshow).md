@@ -101,8 +101,6 @@ Youtube,  Kakao Video, Kakao Blog, Naver News, Naver Blog, Naver Cafe
 
 
 
-<br>
-
 **가. Signin(로그인)/메인페이지**
 
 주소를 치고 들어가면 가장 먼저 있는 항목입니다. 아이디, 비번은 각각 1234로 하시면 들어갈 수 있습니다. 
