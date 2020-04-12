@@ -1,6 +1,6 @@
 ---
 
-title: 머신러닝 수업 1강
+title: 멀티캠퍼스 머신러닝 수업 1강
 excerpt: 머신러닝 수업 4월 6일
 toc: true
 toc_sticky: true
@@ -240,7 +240,7 @@ FaaS  함수까지 제공함(컴퓨터+ 윈도우+ 각종 소프트웨어 + 각�
 
 <br>
 
-## 3.머신러닝 실습하기
+## 3. 머신러닝 실습하기
 
 [강사님깃허브 주소](https://github.com/joneconsulting/ml)
 
