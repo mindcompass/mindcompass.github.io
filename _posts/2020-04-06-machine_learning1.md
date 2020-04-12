@@ -173,6 +173,10 @@ Andrej Karpathy라는 사람에 의해서 헤밍웨이의 소설 The Sun Also Ri
 
 
 
+
+
+<br>
+
 **다. 대표적 알고리즘**
 
 - 분류
@@ -186,15 +190,23 @@ Andrej Karpathy라는 사람에 의해서 헤밍웨이의 소설 The Sun Also Ri
 
 
 
+
+
+<br>
+
 **라.Scikit-learn 분석 알고리즘 가이드**
 
 어떤 상황에서 어떤 머신러닝을 수행해야 하는지에 대한 명확한 정답은 없지만, 대략적인 가이드는 존재합니다. 
 
 아래는 scikit-learn에서 제공하는 가이드입니다. 
 
-![현업에서 많이 사용하는 Python 모듈 | Scikit-Learn](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9950844F5C986AD827)
+![scikit-learn분석알고리즘가이드](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9950844F5C986AD827)
 
 
+
+
+
+<br>
 
 **quiz it상식**
 
@@ -225,6 +237,8 @@ FaaS  함수까지 제공함(컴퓨터+ 윈도우+ 각종 소프트웨어 + 각�
 
 
 
+
+<br>
 
 ## 3.머신러닝 실습하기
 
@@ -271,6 +285,10 @@ print("정답률 = " , accuracy_score([0, 0, 0, 1], test_label))
 
 
 
+
+
+<br>
+
 **시도2_XOR 알고리즘을 Linear SVC로 수행**
 
 ```python
@@ -303,6 +321,10 @@ print("정답률 = " , accuracy_score([0, 1, 1, 0], test_label))  #(*) xor 전�
 ```
 
 
+
+
+
+<br>
 
 **시도3 XOR  알고리즘을 KNeighborsClassifier(군집분석)로 수행**
 
@@ -447,6 +469,8 @@ Name: quality, dtype: int64
 
 
 
+
+<br>
 
 **quality에 5,6,7에 너무 밀집되어 있고, 전체 가지의 수도 너무 많음-> 상중하로 단순화 시켜보자!**
 
