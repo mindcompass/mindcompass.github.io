@@ -193,6 +193,8 @@ x_train, y_train, x_test, y_test_index = prepareData()
 
 **모델1**
 
+<span style="color:red">**val_loss: 0.4692 /val_accuracy: 0.8457**</span>
+
 ```python
 #모델1
 model = Sequential()
@@ -229,6 +231,8 @@ plt.show()
 
 **모델2**
 
+<span style="color:red">**val_loss: 0.3793 - val_accuracy: 0.8571**</span>
+
 ```python
 model = Sequential()
 model.add(Dense(512, input_dim=len(x_train.columns), activation='relu'))
@@ -257,6 +261,8 @@ result=model.fit(x_train, y_train, epochs=30, batch_size=10, validation_split=0.
 <br>
 
 **모델3**
+
+<span style="color:red">**val_loss: 0.3778 - val_accuracy: 0.8629**</span>
 
 신경망을 더 쌓아서 좀 더 정교한 모델을 만들어 보겠습니다.
 

@@ -1,6 +1,6 @@
 ---
-title: 멀티캠퍼스 머신러닝 수업 6_1(MNIST,CIFAR)
-excerpt: 머신러닝 수업 4월 14일 멀티캠퍼스 강의_1
+title: 멀티캠퍼스 머신러닝 수업 6(MNIST,CIFAR)
+excerpt: 머신러닝 수업 4월 14일 멀티캠퍼스 강의
 toc: true
 toc_sticky: true
 
