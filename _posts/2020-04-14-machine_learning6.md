@@ -949,7 +949,7 @@ df_output.to_csv('result.csv', index=False)
 
 <br>
 
-**강사님은 기존 train데이터를 모두 사용해서 accuracy를 구했기 때문에 검증 accuracy가 아닙니다. 따라서 위의 기계학습 결과(SVM,랜덤포레스트)와 같이 검증데이트를 0.2를 빼서 따로 검증해야 합니다.**
+**강사님은 기존 train데이터를 모두 사용해서 accuracy를 구했기 때문에 검증 accuracy가 아닙니다. 따라서 위의 기계학습 결과(SVM,랜덤포레스트)와 같이 validation_data를 20%를 빼서 따로 검증해야 합니다.**
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -1008,6 +1008,6 @@ print(grid_result.best_params_)
 #0.7188571453094482
 #{'activation': 'relu', 'batch_size': 5, 'nb_epoch': 25, 'optimizer': 'adagrad', 'out_dim': 200}
 
-#정확도가 떨어지기 때문에 test데이터에 대한 검증은 생략합니다. 
+#정확도가 떨어지기 때문에 validation_data에 대한 검증은 생략합니다. 
 ```
 

@@ -26,6 +26,10 @@ last_modified_at: 2020-04-15
 
 코랩으로 수행하겠습니다. 
 
+<br>
+
+## 1.데이터전처리
+
 ```python
 from google.colab import drive
 drive.mount('/content/gdrive/') 
@@ -188,6 +192,8 @@ x_train, y_train, x_test, y_test_index = prepareData()
 ```
 
 <br>
+
+## 2.분류모형 구성하기
 
 적당히 히든층 3개로 모델을 만들어 보겠습니다.
 
