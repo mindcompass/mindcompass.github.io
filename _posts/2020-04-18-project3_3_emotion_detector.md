@@ -1,5 +1,5 @@
 ---
-title: open-cv와 딥러닝을 통해 인간의 얼굴표정 인식하기
+title: open-cv와 딥러닝을 통해 얼굴표정 인식하기
 excerpt: web캠을 통해 실시간으로 감정을 분석할 수 있는 프로그램 안내
 toc: true
 toc_sticky: true
@@ -48,8 +48,6 @@ last_modified_at: 2020-04-18
 
 코드를 살펴보니 scipy 최신버전에서는 몇가지 함수기능이 지원되지 않아서 오류가 발생합니다.  
 
-<br>
-
 프로그램이 있는 폴더로 이동한 다음 아래 명령어를 치면 실행됩니다. 
 
 ```python
@@ -63,8 +61,6 @@ python emotions.py
 웹캠이 설치되어 있어야 활용 가능합니다. 
 
 ![Demo](https://github.com/petercunha/Emotion/blob/master/demo/demo.gif?raw=true)
-
-<br>
 
 아래와 같은 패키지가 설치되어 있어야 합니다. 
 
@@ -90,7 +86,7 @@ python emotions.py
 
 
 
-
+<br>
 
 **[프로그램 2 링크](https://github.com/omar178/Emotion-recognition)**
 
