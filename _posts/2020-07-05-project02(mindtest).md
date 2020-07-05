@@ -26,7 +26,7 @@ last_modified_at: 2020-07-05
 
 [마인드테스트 사이트 바로가기](http://selfcompass.synology.me:7006/matte) 
 
-Email과 password는 Sign up에서 등록하시면 됩니다. 
+로그인은 이름, 비밀번호 등의 정보를 Sign up에서 등록하시면 됩니다. 
 
 그냥 들어가고 싶은 분은 name은 kyuhyun과 password에 각각 123를 입력해주세요. 
 
