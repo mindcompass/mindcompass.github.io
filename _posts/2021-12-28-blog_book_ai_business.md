@@ -11,8 +11,12 @@ tags:
 - AI
 - 독후감
 - 비즈니스
+-
+use_math: true
 last_modified_at: 2021-12-08
 ---
+
+<br>
 
 ![](https://i.imgur.com/UXxRdEa.jpg){: width="50%"}{: .align-center}
 
