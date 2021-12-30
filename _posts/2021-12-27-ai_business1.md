@@ -1,4 +1,5 @@
 ---
+
 title:  [독후감] 인공지능 비즈니스의 모든 것 (정지훈 지음)
 excerpt: [인공지능 비즈니스의 모든 것]을 읽고 생각 정리
 toc: true
@@ -6,7 +7,6 @@ toc_sticky: true
 
 categories:
   - book
-
 tags:
 - book
 - AI
