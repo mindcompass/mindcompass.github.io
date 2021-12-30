@@ -1,6 +1,6 @@
 ---
 
-title: Sprint boot 프로젝트 WAR로 배포하기_02232
+title: 인공지능 비즈니스의 모든 것
 excerpt: 인공지능 비즈니스의 모든 것을 읽고 생각 정리
 toc: true
 toc_sticky: true
