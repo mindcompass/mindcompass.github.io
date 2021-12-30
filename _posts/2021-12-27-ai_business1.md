@@ -1,7 +1,7 @@
 ---
 
-title:인공지능 비즈니스의 모든 것
-excerpt:'인공지능 비즈니스의 모든 것'을 읽고 생각 정리
+title: 멀티캠퍼스 머신러닝 수업 6(MNIST,CIFAR)222
+excerpt: 머신러닝 수업 4월 14일 멀티캠퍼스 강의
 toc: true
 toc_sticky: true
 
